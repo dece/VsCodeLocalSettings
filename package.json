@@ -1,7 +1,7 @@
 {
     "name": "local-settings",
     "displayName": "Local Settings",
-    "description": "Override desired user settings with local settings for smoother settings sync",
+    "description": "Override desired user settings with local settings for smoother settings sync.",
     "version": "0.0.1",
     "publisher": "dece1312",
     "engines": {
@@ -20,7 +20,18 @@
                 "command": "localSettings.loadLocalSettings",
                 "title": "Local settings: Load"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "LocaSettings configuration",
+            "properties": {
+                "localSettings.fileName": {
+                    "type": "string",
+                    "default": "localSettings.json",
+                    "description": "File name storing the local settings on this machine, in the User folder."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
