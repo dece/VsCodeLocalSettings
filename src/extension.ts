@@ -7,6 +7,14 @@ export function activate(context: vscode.ExtensionContext) {
 
     let disposable = vscode.commands.registerCommand('localSettings.loadLocalSettings', () => {
         vscode.window.showInformationMessage('Loading local settings');
+
+        // Notes
+        // export enum ConfigurationTarget {
+        //     Global = 1,
+        //     Workspace = 2,
+        //     WorkspaceFolder = 3
+        // }
+        // WorkspaceConfiguration (get, has, inspect, update)
     });
     
     context.subscriptions.push(disposable);
