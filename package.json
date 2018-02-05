@@ -3,7 +3,7 @@
     "displayName": "Local Settings",
     "description": "Override desired user settings with local settings for smoother settings sync",
     "version": "0.0.1",
-    "publisher": "dece-drug-stash",
+    "publisher": "dece1312",
     "engines": {
         "vscode": "^1.19.0"
     },
@@ -11,14 +11,14 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "*"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "localSettings.loadLocalSettings",
+                "title": "Local settings: Load"
             }
         ]
     },
