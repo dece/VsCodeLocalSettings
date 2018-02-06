@@ -1,7 +1,9 @@
-# Change Log
-All notable changes to the "local-settings" extension will be documented in this file.
+Change Log
+==========
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
-- Initial release
+
+0.0.1 - 2018-02-05
+------------------
+
+- Initial release, not working
