@@ -4,6 +4,11 @@
     "description": "Override desired user settings with local settings for smoother settings sync.",
     "version": "0.0.1",
     "publisher": "dece1312",
+    "license": "WTFPL",
+    "repository": {
+        "type": "git",
+        "url": "github:Shgck/VsCodeLocalSettings"
+    },
     "engines": {
         "vscode": "^1.19.0"
     },
