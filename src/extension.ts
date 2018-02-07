@@ -9,11 +9,11 @@ import LocalSettingsManager from "./manager";
 export function activate(context: vscode.ExtensionContext) {
     // Get informations on environment
     const extensionEnvironment = new LocalSettingsEnvironment(context);
-
+    
     // Start the manager.
     const manager = new LocalSettingsManager(extensionEnvironment);
     context.subscriptions.push(manager);
-
+    
     // Register extension contributions.
     const disposables: Disposable[] = [];
     disposables.push(
@@ -24,5 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
     context.subscriptions.push(...disposables);
 }
+
+
 
 export function deactivate() { }

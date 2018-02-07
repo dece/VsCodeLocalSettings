@@ -76,8 +76,7 @@ export default class LocalSettingsEnvironment {
             commons.showError('Could not find VS Code directory.');
             return "";
         }
-        
-        commons.showInfo(path.join(codeDir, "User"));
+
         return path.join(codeDir, "User");
     }
 }

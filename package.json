@@ -28,12 +28,12 @@
         ],
         "configuration": {
             "type": "object",
-            "title": "LocaSettings configuration",
+            "title": "LocalSettings configuration",
             "properties": {
-                "localSettings.fileName": {
+                "localSettings.path": {
                     "type": "string",
                     "default": "localSettings.json",
-                    "description": "File name storing the local settings on this machine, in the User folder."
+                    "description": "Path of the local settings file on this machine. Can be absolute or relative to the User folder."
                 }
             }
         }
