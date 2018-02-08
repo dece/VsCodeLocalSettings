@@ -4,9 +4,7 @@
  * Most of the code here is inspired by Shan Khan's Settings Sync extension.
  */
 
-import * as fs from "fs";
-import * as os from "os";
-import * as path from "path";
+const fs = require("fs");
 
 import * as vscode from "vscode";
 

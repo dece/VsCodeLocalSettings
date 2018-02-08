@@ -3,7 +3,7 @@ const path = require("path");
 
 import * as vscode from "vscode";
 
-import commons from "./commons";
+import * as commons from "./commons";
 import LocalSettingsEnvironment from "./environment";
 import { commands } from "vscode";
 
