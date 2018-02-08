@@ -73,7 +73,7 @@ export default class LocalSettingsManager {
         const config = vscode.workspace.getConfiguration();
         for (const key in settings) {
             try {
-                config.update(key, settings[key]);
+                config.update(key, settings[key], true);
             }
             catch (e) {
                 commons.showException(e);
