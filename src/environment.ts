@@ -5,6 +5,8 @@
  */
 
 const fs = require("fs");
+const os = require("os");
+const path = require("path");
 
 import * as vscode from "vscode";
 
@@ -38,7 +40,7 @@ export default class LocalSettingsEnvironment {
         switch (process.platform as string) {
             case "linux":
                 return OperatingSystem.Linux;
-            case "windows":
+            case "win32":
                 return OperatingSystem.Windows;
             case "darwin":
                 return OperatingSystem.Osx;
