@@ -1,9 +1,9 @@
-import * as fs from "fs";
-import * as path from "path";
+const fs = require("fs");
+const path = require("path");
 
 import * as vscode from "vscode";
 
-import * as commons from "./commons";
+import commons from "./commons";
 import LocalSettingsEnvironment from "./environment";
 import { commands } from "vscode";
 
@@ -30,7 +30,7 @@ export default class LocalSettingsManager {
         this.extensionConfig = vscode.workspace.getConfiguration("localSettings");
     }
 
-    /** Start watching the local settings file */
+    /** TODO Start watching the local settings file. */
     public startWatcher = () => {
 
     }
@@ -48,6 +48,7 @@ export default class LocalSettingsManager {
             }
             catch (e) {
                 commons.showException(e);
+                return;
             }
             
             if (data !== null) {
@@ -59,6 +60,7 @@ export default class LocalSettingsManager {
     /** Dispose VS Code resources on deactivation. */
     public dispose = () => {}
 
+    /** Get a usable file path  */
     private get localSettingsFilePath(): string {
         let localSettingsPath = this.extensionConfig.get<string>("path");
         if (path.isAbsolute(localSettingsPath))
@@ -68,9 +70,14 @@ export default class LocalSettingsManager {
 
     /** Apply all configuration options contained in 'settings' to the user configuration. */
     private updateSettings = (settings: object) => {
+        const config = vscode.workspace.getConfiguration();
         for (const key in settings) {
-            const config = vscode.workspace.getConfiguration();
-            commons.showInfo(key + ' - ' + config.get<string>(key) + ' - ' + settings[key]);
+            try {
+                config.update(key, settings[key]);
+            }
+            catch (e) {
+                commons.showException(e);
+            }
         }
     }
 }
