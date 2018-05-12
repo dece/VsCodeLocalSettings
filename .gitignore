@@ -1,4 +1,6 @@
-out
-node_modules
+node_modules/
+out/
+.vscode/
 .vscode-test/
-.vsix
+
+*.code-workspace
