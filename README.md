@@ -1,6 +1,10 @@
 Local Settings
 ==============
 
+THIS EXTENSION WILL NOT WORK until
+[this issue](https://github.com/Microsoft/vscode/issues/43226)
+or a similar one is solved.
+
 Local Settings is a VS Code extension to let you store settings to a machine in
 a different file than the usual `settings.json`. This is useful when you sync
 automatically your settings (e.g. with the *Settings Sync* extension) but have
