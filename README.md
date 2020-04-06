@@ -1,6 +1,11 @@
 Local Settings
 ==============
 
+2020-04-06: I'm archiving this repo since I'm no longer interested in the
+feature, as its main purpose, installation-specific settings that play nicely
+with the Settings Sync extension, is now achievable using sync pragmas. As I
+still think the issue it raised below is relevant, I'll let everything as is.
+
 THIS EXTENSION WILL NOT WORK until
 [this issue](https://github.com/Microsoft/vscode/issues/43226)
 or a similar one is solved.
